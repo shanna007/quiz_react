@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Admin from './Admin';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+  return <Admin />;
+};
 
 export default App;
+
+
+
+// import React, { useState ,useEffect } from 'react';
+// import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+// import Login from './Login';
+// import Admin from './Admin';
+
+// const App = () => {
+//    
+//   const [isLogin, setIsLogin] = useState(() => localStorage.getItem('isLogin') === 'true');
+
+//     useEffect(() => {
+//    
+//     if (isLogin) {
+//       localStorage.setItem('isLogin', 'true');
+//     } else {
+//       localStorage.removeItem('isLogin');
+//     }
+//   }, [isLogin]);
+
+//   return (
+//     <Router>
+//       <Routes>
+//         <Route
+//           path="/login"
+//           element={<Login onLogin={() => setIsLogin(true)} />}
+//         />
+//         <Route
+//           path="/admin"
+//           element={
+//             isLogin ? <Admin /> : <Navigate to="/login" replace />
+//           }
+//         />
+//         <Route
+//           path="/"
+//           element={<Navigate to="/login" replace />}
+//         />
+//       </Routes>
+//     </Router>
+//   );
+// };
+// export default App;
