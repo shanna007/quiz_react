@@ -118,7 +118,7 @@ const Admin = () => {
         </Content>
       </Layout>
       <Footer style={{ textAlign: 'center' }}>
-        Quiz管理系统 ©2025 Created by Cyd
+        Quiz管理系统 ©2025 Created by Hss
       </Footer>
     </Layout>
   );
